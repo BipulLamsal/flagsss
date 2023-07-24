@@ -1,8 +1,49 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Flagsss 
 
-Currently, two official plugins are available:
+A React JS flash card memory flag game. The concept is simple yet engaging – challenge yourself to a brain-shuffling experience while honing your flag knowledge. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Demo
+
+https://flagsss.vercel.app/
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/BipulLamsal/flagsss.git
+```
+
+Go to the project directory
+
+```bash
+  cd flagsss
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## Acknowledgements
+
+ - [Flag API](https://restcountries.com/v3.1/all)
+ - [TOP](https://www.theodinproject.com/paths/full-stack-javascript/courses/react-new)
+ 
+
+
+## Feedback
+
+If you have any feedback, please reach me out to at bipullamsal@gmail.com
+
