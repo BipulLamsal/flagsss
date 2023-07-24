@@ -1,0 +1,49 @@
+.model_overlay
+{
+    background-color: #17171129;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(8px);
+
+}
+.model_container
+{
+
+    max-width: 500px;
+    position: absolute;
+    background-color: var(--dark-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 25px 15px #53535329;
+}
+.model_title
+{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+.model_subtitle
+{
+    text-align: center;
+}
+.model_header
+{
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+.model_header > button
+{
+    background-color: #f8f8f8;
+    cursor: pointer;
+    border: none;
+    color: var(--dark-color);
+}

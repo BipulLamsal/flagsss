@@ -8,6 +8,8 @@ import FlagCard from "./components/FlagCard";
 function App() {
   const [round, setRound] = useState(1);
   const [flag, setFlag] = useState([]);
+  const [score, setScore] = useState(0);
+  const [bestscore, setBestScore] = useState(0);
 
   useEffect(() => {
     const imgId = [];
@@ -52,7 +54,7 @@ function App() {
 
   return (
     <>
-      <Header round={round}></Header>
+      <Header round={round} score={score} bestscore={bestscore}></Header>
 
       <div className="game_container">
         <FlagCard
@@ -60,6 +62,10 @@ function App() {
           setFlag={setFlag}
           round={round}
           setRound={setRound}
+          score={score}
+          setScore={setScore}
+          setBestScore={setBestScore}
+          bestscore={bestscore}
         ></FlagCard>
       </div>
     </>

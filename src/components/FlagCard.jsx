@@ -1,7 +1,17 @@
 import { useState } from "react";
-function FlagCard({ flag, setFlag, round, setRound }) {
+import Restart from './Restart'
+function FlagCard({
+  flag,
+  setFlag,
+  round,
+  setRound,
+  score,
+  setScore,
+  bestscore,
+  setBestScore,
+}) {
   const [selected, setSelected] = useState([]);
-
+  const [over,setOver] = useState(0)
   const handleFlagClick = (item) => {
     if (
       !selected.some((element) => {
@@ -9,14 +19,16 @@ function FlagCard({ flag, setFlag, round, setRound }) {
       })
     ) {
       setSelected([...selected, item]);
+      setScore(score + 1);
       shuffleDeck();
+      setBestScore(score + 1 > bestscore ? score + 1 : bestscore);
 
       if (selected.length + 1 == flag.length) {
         setSelected([]);
         setRound(round + 1);
       }
     } else {
-      console.log("You lost");
+      setOver(item)
       setRound(1);
       setSelected([]);
     }
@@ -29,10 +41,16 @@ function FlagCard({ flag, setFlag, round, setRound }) {
       [shuffleFlag[i], shuffleFlag[j]] = [shuffleFlag[j], shuffleFlag[i]];
     }
     setFlag(shuffleFlag);
+    
   }
+
+
+
+
 
   return (
     <>
+      {(over != 0)?<Restart detail={over} setDetail = {setOver}score={score} bestscore={bestscore} setScore={setScore} ></Restart>:<></>}
       {flag.map((item) => {
         return (
           <div

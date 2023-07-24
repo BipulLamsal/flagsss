@@ -5,6 +5,7 @@
 }
 
 .flag_card {
+  transform: scale(1);
   cursor: pointer;
   background-color: var(--muted-dark-color);
   width: 200px;
@@ -15,7 +16,14 @@
   align-items: center;
   position: relative;
   margin: 20px 5px;
+  transition: transform 0.2s ease-in-out;
 }
+
+.flag_card:hover
+{
+  transform: scale(1.05);
+}
+
 .flag_logo {
   font-size: 100px;
   text-align: center;
