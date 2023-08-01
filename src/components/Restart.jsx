@@ -15,7 +15,7 @@ function Restart({ detail, score,setScore, bestscore,setDetail, }) {
       <div className="model_overlay"></div>
       <div className="model_container">
         <p className="model_title">Game Over!</p>
-        <p className="model_subtitle">Your Selected {detail.name} Twice</p>
+        <p className="model_subtitle">You Selected {detail.name} Twice</p>
         <p className="flag_logo">{detail.flag}</p>
         <div className="model_header">
           <p className="game_rounded">Score : {score} </p>
